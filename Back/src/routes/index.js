@@ -3,6 +3,13 @@ const app = express();
 const createScene = require('../controllers/sceneController')
 const multer = require("multer");
 
+const MIME_TYPES = {
+    'image/jpg': 'jpg',
+    'image/jpeg': 'jpg',
+    'image/png': 'png'
+};
+
+
 let storage = multer.diskStorage(
     {
         destination: './uploads/',

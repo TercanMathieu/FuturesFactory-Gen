@@ -1,14 +1,18 @@
+const apiResponse = require('../helpers/apiResponse');
+const responseMessage = require('../helpers/constants');
+
 async function createScene(req, res) {
     try {
-        console.log(req.file)
-        res.send(req.file);
+        if (!req.file) {
+            return apiResponse.errorResponse(res, responseMessage.errorMessages.fileNotUpload)
+        }
+        return apiResponse.successResponseWithData(res, {data: req.file, message: responseMessage.successMessages.success }  )
     }catch(err) {
-        res.send(400);
+       return  apiResponse.errorResponse(res, err)
     }
 
 }
 exports.create = [
-    // multerHelper,
     createScene
 ]
 
