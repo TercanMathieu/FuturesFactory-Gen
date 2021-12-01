@@ -12,7 +12,7 @@ const MIME_TYPES = {
 
 let storage = multer.diskStorage(
     {
-        destination: './uploads/',
+        destination: './src/script/FINAL',
         filename: function ( req, file, cb ) {
             cb( null, file.originalname);
         }
@@ -20,6 +20,6 @@ let storage = multer.diskStorage(
 );
 const upload = multer( { storage: storage } );
 
-app.post('/create', upload.single('profile'), createScene.create);
+app.post('/create', upload.single('NFT'), createScene.create);
 
 module.exports = app;

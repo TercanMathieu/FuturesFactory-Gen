@@ -22,7 +22,8 @@ exports.errorMessages = {
     validationError: "Validation error.",
     wrongCredentials: "Email or password wrong.",
     targetNotFound: "Target not found.",
-    targetsLimit: "Targets limit."
+    targetsLimit: "Targets limit.",
+    invalidExtension: "Wrong Extension.",
 }
 
 exports.errors = {

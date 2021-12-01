@@ -5,6 +5,10 @@ exports.successResponse = function (res, msg) {
     return res.status(200).json(data);
 };
 
+exports.successWithFile = function (res, path) {
+    return res.sendFile(path)
+}
+
 exports.successResponseWithData = function (res, data) {
     return res.status(200).json(data);
 };
