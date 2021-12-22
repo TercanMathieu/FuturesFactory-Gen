@@ -11,9 +11,10 @@ const object = {
     'image/png': 'png',
 };
 
-function execShellCommand() {
+function execShellCommand(nft) {
     return new Promise((resolve, reject) => {
-        exec('cd src/script/ && ./blender.sh', async (error, stdout, stderr) => {
+        exec('rm src/script/render_FINAL/*')
+        exec('cd src/script/ && ./blender.sh FINAL/' + nft, async (error, stdout, stderr) => {
             if (error) {
                 console.error(`error: ${error.message}`);
                 return reject(error)
@@ -22,6 +23,8 @@ function execShellCommand() {
                 console.error(`stderr: ${stderr}`);
             }
             console.log(`stdout:\n${stdout}`);
+            exec('rm src/script/FINAL/' + nft +'0001.png')
+
             return  resolve(stdout? stdout : stderr);
         });
     });
@@ -34,8 +37,8 @@ async function createScene(req, res) {
         }
         for (const property in object) {
             if (property === req.file.mimetype) {
-                await execShellCommand()
-                return(apiResponse.successWithFile(res,'/home/tercan/Documents/Stage/FuturesFactory-Gen/Back/src/script/render_FINAL/'+req.file.filename +'0001.png'))
+                await execShellCommand(req.file.filename)
+               return (apiResponse.successWithFile(res,'/Users/mathieutercan/Documents/FuturesFactory-Gen/Back/src/script/render_FINAL/'+req.file.filename +'0001.png'))
             }
         }
         return apiResponse.errorResponse(res, responseMessage.errorMessages.invalidExtension)
@@ -54,7 +57,6 @@ exports.create = [
 
     //function
     addQueue,
-    // createScene
 ]
 
 

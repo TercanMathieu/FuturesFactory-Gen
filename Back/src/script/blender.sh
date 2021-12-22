@@ -2,6 +2,7 @@
 
 #/Applications/blender.app/Contents/MacOS/blender
 #/ mettre un argument qui prend le nom du fichier exact (Mathieu Tercan)
-for FILE in FINAL/*
-do blender --background scene.blend --python blender.py --render-output //render_$FILE --engine CYCLES --use-extension 1 --render-frame 1  -- $FILE
-done
+echo $1
+#for FILE in FINAL/*
+blender --background scene.blend --python blender.py --render-output //render_$1 --engine CYCLES --use-extension 1 --render-frame 1  -- $1
+#done
