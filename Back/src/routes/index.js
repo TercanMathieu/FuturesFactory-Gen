@@ -14,6 +14,9 @@ let storage = multer.diskStorage(
     {
         destination: './src/script/FINAL',
         filename: function ( req, file, cb ) {
+            console.log("file",file)
+            file.originalname = file.originalname.split(' ').join('-')
+
             cb( null, file.originalname);
         }
     }
