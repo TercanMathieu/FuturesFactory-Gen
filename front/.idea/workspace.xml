@@ -2,11 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6941791c-9266-4662-a47d-dc6da111beb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../front/my-app/src/Component/displaySneakers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../front/my-app/src/Component/import_button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back/src/controllers/sceneController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/src/controllers/sceneController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back/src/helpers/queue.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/src/helpers/queue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Component/Wallet/displayNFT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/contracts/json.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-nft/nft-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-nft/scripts/deploy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-nft/scripts/mint-nft.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/src/script/blender.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/src/script/blender.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Back/src/script/get-pip.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/src/script/scene.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-satoshi/.idea/front-satoshi.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-satoshi/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-satoshi/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-satoshi/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-satoshi/visu-satoshi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/displaySneakers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/import_button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/import_button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/20210818_203027.jpg0001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +32,17 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="21j65SM7TwXimKN33cQW6GBsThP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -27,12 +55,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Component/Wallet" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -43,13 +77,27 @@
       <option name="presentableId" value="Default" />
       <updated>1638441968174</updated>
       <workItem from="1638441971187" duration="199000" />
+      <workItem from="1641378173566" duration="3825000" />
+      <workItem from="1641465318548" duration="11974000" />
+      <workItem from="1641510406139" duration="15334000" />
     </task>
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
-    <option name="startingDirectory" value="$PROJECT_DIR$/../../.." />
+    <option name="startingDirectory" value="$USER_HOME$" />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

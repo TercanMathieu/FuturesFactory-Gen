@@ -10,7 +10,7 @@ export default class FileUploadPage extends React.Component {
 
     componentDidUpdate(prevProps, prevState) {
         if (prevState.image !== this.state.image) {
-            console.log('image = ',this.state.image, 'caca')
+            console.log("new Image loaded")
         }
     }
 
@@ -34,7 +34,6 @@ export default class FileUploadPage extends React.Component {
             const blob = await res.blob()
             const url = URL.createObjectURL(blob);
             this.setState({image: url})
-
         }
        }
         catch(e) {
@@ -55,7 +54,6 @@ export default class FileUploadPage extends React.Component {
 
             </form>
                 <img src={this.state.image} />
-
             </div>
         );
     }
