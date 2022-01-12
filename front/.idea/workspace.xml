@@ -2,28 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6941791c-9266-4662-a47d-dc6da111beb9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Component/Wallet/displayNFT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asset/contracts/json.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../my-nft/nft-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../my-nft/scripts/deploy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../my-nft/scripts/mint-nft.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back/src/script/blender.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/src/script/blender.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/src/controllers/sceneController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/src/controllers/sceneController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Back/src/script/get-pip.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back/src/script/scene.blend" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Back/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front-satoshi/.idea/front-satoshi.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-satoshi/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-satoshi/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-satoshi/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../front-satoshi/visu-satoshi" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Wallet/displayNFT.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Wallet/displayNFT.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/displaySneakers.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/import_button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/import_button.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/asset/20210818_203027.jpg0001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +71,10 @@
       <workItem from="1641378173566" duration="3825000" />
       <workItem from="1641465318548" duration="11974000" />
       <workItem from="1641510406139" duration="15334000" />
+      <workItem from="1641773332258" duration="3570000" />
+      <workItem from="1641833129303" duration="619000" />
+      <workItem from="1641849486857" duration="7250000" />
+      <workItem from="1641929010310" duration="6336000" />
     </task>
     <servers />
   </component>

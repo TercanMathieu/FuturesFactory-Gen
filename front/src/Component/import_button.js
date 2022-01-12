@@ -51,12 +51,10 @@ export default class FileUploadPage extends React.Component {
                 </label>
                 <br/>
                     <button type="submit">Envoyer</button>
-
             </form>
                 <img src={this.state.image} />
             </div>
         );
     }
 }
-/*Faire un cpmposant qui prend en props un .obj et un .png et afficher soit l'un soit l'autre*/
 

@@ -15,8 +15,8 @@ const object = {
 
 function execShellCommand(nft) {
     return new Promise((resolve, reject) => {
-        exec('rm src/script/render_FINAL/*')
-        exec('cd src/script/ && ./blender.sh FINAL/' + nft, async (error, stdout, stderr) => {
+        // exec('rm src/script/render_FINAL/*') // Supprime touts les rendus
+        exec('cd src/script/ && ./blender.sh FINAL/' + nft + '.png', async (error, stdout, stderr) => {
             if (error) {
                 console.error(`error: ${error.message}`);
                 return reject(error)
@@ -34,8 +34,7 @@ function execShellCommand(nft) {
 
 async function createScene(req, res) {
     try {
-        const name = req.body.name.split(' ').join('_');
-
+        let name = req.body.name.replace(/#| |/gi, '-')
         if (!req.body.uri) {
             return apiResponse.errorResponse(res, responseMessage.errorMessages.fileNotUpload)
         }
@@ -47,9 +46,9 @@ async function createScene(req, res) {
             return  apiResponse.errorResponse(res, error)
         }, async function () {
                 await execShellCommand(name)
-                return (apiResponse.successWithFile(res,'/home/mathieutercan/FF/FuturesFactory-Gen/Back/src/script/render_FINAL/'+ name + '0001.png'))
+                return (apiResponse.successWithFile(res,'/Users/mathieutercan/Documents/FuturesFactory-Gen/Back/src/script/render_FINAL/'+ name + '.png0001.png'))
         });
-        } catch(err) {
+    } catch(err) {
             return  apiResponse.errorResponse(res, err)
         }
 }
