@@ -3,20 +3,14 @@ const responseMessage = require('../helpers/constants');
 const exec = require('child_process').exec;
 const queue = require('../helpers/queue')
 const fileHandling = require('../helpers/fileHandling')
-
+const generateIpfsHash = require('../helpers/pinataHelper')
 let queuedFn = queue.queue(createScene);
 
 
-const object = {
-    'image/jpg': 'jpg',
-    'image/jpeg': 'jpg',
-    'image/png': 'png',
-};
-
 function execShellCommand(nft) {
     return new Promise((resolve, reject) => {
-        // exec('rm src/script/render_FINAL/*') // Supprime touts les rendus
-        exec('cd src/script/ && ./blender.sh FINAL/' + nft + '.png', async (error, stdout, stderr) => {
+        // exec('rm src/scripts/render_FINAL/*') // Supprime touts les rendus
+        exec('cd src/scripts/ && ./blender.sh FINAL/' + nft + '.png', async (error, stdout, stderr) => {
             if (error) {
                 console.error(`error: ${error.message}`);
                 return reject(error)
@@ -25,8 +19,7 @@ function execShellCommand(nft) {
                 console.error(`stderr: ${stderr}`);
             }
             console.log(`stdout:\n${stdout}`);
-            exec('rm src/script/FINAL/' + nft +'0001.png')
-
+            exec('rm src/scripts/FINAL/' + nft +'0001.png')
             return  resolve(stdout? stdout : stderr);
         });
     });
@@ -35,26 +28,45 @@ function execShellCommand(nft) {
 async function createScene(req, res) {
     try {
         let name = req.body.name.replace(/#| |/gi, '-')
-        if (!req.body.uri) {
+
+        if (!req.body.uri || req.body.uri === 'undefined') {
             return apiResponse.errorResponse(res, responseMessage.errorMessages.fileNotUpload)
         }
-        fileHandling.download(req.body.uri, "/Users/mathieutercan/Documents/FuturesFactory-Gen/Back/src/script/FINAL/" + name + '.png', function (state) {
+        fileHandling.download(req.body.uri, "/Users/mathieutercan/Documents/FuturesFactory-Gen/Back/src/scripts/FINAL/" + name + '.png', function (state) {
             console.log("progress", state);
         }, function (response) {
             console.log("status code", response.statusCode);
-        }, function (error) {
-            return  apiResponse.errorResponse(res, error)
-        }, async function () {
+        },
+            function (error) {
+            try {
+                console.log("error", error);
+                return apiResponse.errorResponse(res, error)
+            } catch (e) {
+                console.log(error)
+
+            }
+        },
+            async function () {
+            try {
                 await execShellCommand(name)
-                return (apiResponse.successWithFile(res,'/Users/mathieutercan/Documents/FuturesFactory-Gen/Back/src/script/render_FINAL/'+ name + '.png0001.png'))
-        });
-    } catch(err) {
-            return  apiResponse.errorResponse(res, err)
-        }
+                let ipfs = await generateIpfsHash.generateIpfsLink(name)
+                console.log("done");
+                return apiResponse.successResponseWithData(res, ipfs)
+            } catch (e) {
+                console.log(e)
+            }
+        })
+    } catch (err) {
+        return apiResponse.errorResponse(res, err)
+    }
 }
 
 function addQueue(req, res) {
-    queuedFn(req, res)
+    try {
+        queuedFn(req, res)
+    } catch (e) {
+        console.log(e)
+    }
 }
 
 exports.create = [

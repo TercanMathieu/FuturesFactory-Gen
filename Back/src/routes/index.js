@@ -3,18 +3,10 @@ const app = express();
 const createScene = require('../controllers/sceneController')
 const multer = require("multer");
 
-const MIME_TYPES = {
-    'image/jpg': 'jpg',
-    'image/jpeg': 'jpg',
-    'image/png': 'png'
-};
-
-
 let storage = multer.diskStorage(
     {
-        destination: './src/script/FINAL',
+        destination: './src/scripts/FINAL',
         filename: function ( req, file, cb ) {
-            console.log("file",file)
             file.originalname = file.originalname.split(' ').join('-')
 
             cb( null, file.originalname);
