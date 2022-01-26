@@ -18,7 +18,7 @@ async function generateIpfsImage(name) {
 
     data.append('pinataMetadata', metadata);
     let res =  await axios.post(url, data, {
-        maxBodyLength: 'Infinity', //this is needed to prevent axios from erroring out with large files
+        maxBodyLength: 'Infinity',
         headers: {
             'Content-Type': `multipart/form-data; boundary=${data._boundary}`,
             pinata_api_key,
@@ -39,7 +39,7 @@ async function generateIpfsJson(hash, name) {
     }
 
     let res =  await axios.post(url, data, {
-        maxBodyLength: 'Infinity', //this is needed to prevent axios from erroring out with large files
+        maxBodyLength: 'Infinity', 
         headers: {
             'Content-Type': `application/json`,
             pinata_api_key,

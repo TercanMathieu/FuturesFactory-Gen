@@ -10,22 +10,20 @@ function getLibrary(provider) {
 }
 // <Web3ReactProvider getLibrary={getLibrary}>
 // </Web3ReactProvider>
-
 const App = () => {
-    const [metamask, setMetaask] = useState("");
+    const [metamask, setMetamask] = useState("");
 
   return !metamask ?  (
       <div className="container">
            <Web3ReactProvider getLibrary={getLibrary}>
-                <ConnectButton function={setMetaask} metamaskAddrs={metamask}/>
+                <ConnectButton function={setMetamask}/>
            </Web3ReactProvider>
       </div>
   ) : (
       <div className="container">
-        <Display/>
+        <Display metamaskAddrs={metamask}/>
       </div>
   )
-
 }
 
 export default App;

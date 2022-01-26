@@ -17,5 +17,5 @@
   "dependencies": {
     "@alch/alchemy-web3": "^1.1.9",
     "dotenv": "^14.2.0"
-  }
+  },
 }

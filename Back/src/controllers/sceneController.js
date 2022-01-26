@@ -32,7 +32,8 @@ async function createScene(req, res) {
         if (!req.body.uri || req.body.uri === 'undefined') {
             return apiResponse.errorResponse(res, responseMessage.errorMessages.fileNotUpload)
         }
-        fileHandling.download(req.body.uri, "/Users/mathieutercan/Documents/FuturesFactory-Gen/Back/src/scripts/FINAL/" + name + '.png', function (state) {
+        fileHandling.download(req.body.uri, "/Users/mathieutercan/Documents/FuturesFactory-Gen/Back/src/scripts/FINAL/" + name + '.png',
+            function (state) {
             console.log("progress", state);
         }, function (response) {
             console.log("status code", response.statusCode);
@@ -40,7 +41,8 @@ async function createScene(req, res) {
             function (error) {
             try {
                 console.log("error", error);
-                return apiResponse.errorResponse(res, error)
+                console.log(req.body)
+                // return apiResponse.errorResponse(res, error)
             } catch (e) {
                 console.log(error)
 

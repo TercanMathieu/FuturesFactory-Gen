@@ -33,7 +33,7 @@ export default function DisplayNFT (props) {
 
      async function searchNft() {
         try {
-       /* use the metamask addrs  */  const result = await fetch('https://eth-mainnet.g.alchemy.com/' + alchemyKey + '/v1/getNFTs/?owner='+ props.metamaskAddrs) //0xcE68e215821ed8e0b31b3227AFb9D019650080c5')
+       /* use the metamask addrs  */  const result = await fetch('https://eth-mainnet.g.alchemy.com/' + alchemyKey + '/v1/getNFTs/?owner='+ '0xcE68e215821ed8e0b31b3227AFb9D019650080c5')
             const NFTs = await result.json();
             await getImageNft(NFTs.ownedNfts);
 
@@ -63,9 +63,11 @@ export default function DisplayNFT (props) {
 
             let res = await fetch("http://localhost:8080/api/create", requestOptions)
             let json = await res.json()
+            console.log(props.metamaskAddrs)
             if (res.status === 200 && json.jsonHash && json.imageHash) {
-                await mintNFT(json.jsonHash, props.metamaskAddrs);
-                setUrl(json.imageHash);
+                 if (await mintNFT(json.jsonHash, props.metamaskAddrs)) {
+                     setUrl(json.imageHash);
+                     }
             } else {
                 console.log("Error")
                 alert("Error")
@@ -75,14 +77,14 @@ export default function DisplayNFT (props) {
         }
     }
 
-        return (
+       return (
             <div>
         <button className={"Button"} onClick={searchNft}>search NFT</button>
                 <div>
                     {imageDiv}
-                    <button className={"Button"} onClick={getNFT}>Send</button>
+                    { img ? <button className={"Button"} onClick={getNFT}>Send</button> : null}
                 </div>
-                <img src={url} alt={"SNKRS"} />
+               <img src={url}/>
             </div>
         );
 }

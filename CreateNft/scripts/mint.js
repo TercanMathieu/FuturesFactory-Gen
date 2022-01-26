@@ -3,10 +3,9 @@ const API_URL = "https://eth-ropsten.alchemyapi.io/v2/vd2d5v4G2XxM9KWdsoXT9Sp5W4
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(API_URL);
 // const contract = require("../artifacts/contracts/MyNFT.sol/FuturesFactory.json");
-const contract = require("../asset/FuturesFactory.json");
+// const contract = require("../asstet/FuturesFactory.json");
 const contractAddress = "0x014682a675C3689bD165E4d25E3005F59A822D92";
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
-console.log(JSON.stringify(contract.abi));
 
 
 async function mintNFT(tokenURI) {
@@ -26,4 +25,4 @@ async function mintNFT(tokenURI) {
     console.log(`Transaction receipt: ${JSON.stringify(transactionReceipt)}`);
 }
 
-mintNFT("https://gateway.pinata.cloud/ipfs/QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP");
+// mintNFT("https://gateway.pinata.cloud/ipfs/QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP");

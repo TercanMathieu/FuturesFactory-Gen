@@ -24,7 +24,6 @@ async function mintNFT(tokenURI, owner) {
     const transactionReceipt = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
 
     console.log(`Transaction receipt: ${JSON.stringify(transactionReceipt)}`);
-    console.log(transactionReceipt.status);
-   // If transaction is mined send true else false
+    return (transactionReceipt.status)// If transaction is mined send true else false
 }
 export default mintNFT;
