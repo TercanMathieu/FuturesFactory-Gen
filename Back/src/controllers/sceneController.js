@@ -41,8 +41,6 @@ async function createScene(req, res) {
             function (error) {
             try {
                 console.log("error", error);
-                console.log(req.body)
-                // return apiResponse.errorResponse(res, error)
             } catch (e) {
                 console.log(error)
 

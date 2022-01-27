@@ -8,8 +8,8 @@ const PRIVATE_KEY = process.env.REACT_APP_PV_METAMASK_ADDRS;
 const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
 
-console.log(JSON.stringify(contract.abi));
-async function mintNFT(tokenURI, owner) {
+    async function mintNFT(tokenURI, owner) {
+    console.log("Minting")
     const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest'); //get latest nonce
 
     const tx = {
