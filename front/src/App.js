@@ -13,8 +13,8 @@ function getLibrary(provider) {
 // </Web3ReactProvider>
 const App = () => {
     const [img, setImg] = useState("")
-    const [metamask, setMetamask] = useState("");
-    const  [url, setUrl] = useState("")
+    const [metamask, setMetamask] = useState(null);
+    const [url, setUrl] = useState("")
 
   return metamask ?  (
       <div className="container">

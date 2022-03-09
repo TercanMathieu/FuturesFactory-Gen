@@ -20,14 +20,14 @@ export default function Mint (props) {
             let res = await fetch("http://localhost:8080/api/create", requestOptions)
             let json = await res.json()
 
-            if (res.status === 200 && json.jsonHash && json.imageHash) {
-                if (await mintNFT(json.jsonHash, props.metamaskAddrs)) {
-                    props.setUrl(json.imageHash);
-                }
-            } else {
-                console.log("Error")
-                alert("Error")
-            }
+            // if (res.status === 200 && json.jsonHash && json.imageHash) {
+            //     if (await mintNFT(json.jsonHash, props.metamaskAddrs)) {
+            //         props.setUrl(json.imageHash);
+            //     }
+            // } else {
+            //     console.log("Error")
+            //     alert("Error")
+            // }
         } catch (e) {
             console.log(e)
         }

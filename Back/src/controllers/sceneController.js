@@ -4,6 +4,7 @@ const exec = require('child_process').exec;
 const queue = require('../helpers/queue')
 const fileHandling = require('../helpers/fileHandling')
 const generateIpfsHash = require('../helpers/pinataHelper')
+const {mintNFT} = require('../scripts/Mint')
 let queuedFn = queue.queue(createScene);
 
 
@@ -20,7 +21,7 @@ function execShellCommand(nft) {
             }
             console.log(`stdout:\n${stdout}`);
             exec('rm src/scripts/FINAL/' + nft +'0001.png')
-            return  resolve(stdout? stdout : stderr);
+            return resolve(stdout? stdout : stderr);
         });
     });
 }
@@ -37,25 +38,22 @@ async function createScene(req, res) {
             console.log("progress", state);
         }, function (response) {
             console.log("status code", response.statusCode);
-        },
-            function (error) {
-            try {
-                console.log("error", error);
-            } catch (e) {
-                console.log(error)
-
-            }
+        }, function (error) {
+            console.log("error", error);
         },
             async function () {
             try {
-                await execShellCommand(name)
-                let ipfs = await generateIpfsHash.generateIpfsLink(name)
-                console.log("done");
-                return apiResponse.successResponseWithData(res, ipfs)
+
+                // await execShellCommand(name);
+                let ipfs = await generateIpfsHash.generateIpfsLink(name);
+                await mintNFT(ipfs, "0x21e0da8fd54e2695d0a542699cc92b22ed486c20");
+                return apiResponse.successResponseWithData(res, ipfs);
+
             } catch (e) {
                 console.log(e)
             }
         })
+
     } catch (err) {
         return apiResponse.errorResponse(res, err)
     }
@@ -70,9 +68,6 @@ function addQueue(req, res) {
 }
 
 exports.create = [
-    //middleware
-
-    //function
     addQueue,
 ]
 

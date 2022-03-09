@@ -10,6 +10,7 @@
     "test-watch": "jest --watch"
   },
   "dependencies": {
+    "@alch/alchemy-web3": "^1.2.5",
     "axios": "^0.24.0",
     "cors": "^2.8.5",
     "dotenv": "^14.2.0",

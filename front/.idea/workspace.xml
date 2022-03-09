@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6941791c-9266-4662-a47d-dc6da111beb9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Back/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back/src/controllers/sceneController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/src/controllers/sceneController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back/src/script/get-pip.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-satoshi/.idea/front-satoshi.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-satoshi/visu-satoshi" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Back/src/helpers/mailer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/src/scripts/blender.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/src/scripts/blender.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Back/src/scripts/scene.blend" beforeDir="false" afterPath="$PROJECT_DIR$/../Back/src/scripts/scene.blend" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Wallet/displayNFT.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Wallet/displayNFT.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/displaySneakers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/import_button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/import_button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asset/20210818_203027.jpg0001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Wallet/searchNft.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Wallet/searchNft.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +69,8 @@
       <workItem from="1641833129303" duration="619000" />
       <workItem from="1641849486857" duration="7250000" />
       <workItem from="1641929010310" duration="6336000" />
+      <workItem from="1646394502008" duration="2309000" />
+      <workItem from="1646401995664" duration="9583000" />
     </task>
     <servers />
   </component>
