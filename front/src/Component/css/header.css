@@ -1,0 +1,45 @@
+.Button {
+    border-radius: 20px;
+}
+
+.logo {
+    background-color: black;
+    display: block;
+    /*width: 200px;*/
+    /*length: 200px;*/
+    margin-left: 50%;
+    margin-right: 50%;
+}
+.header {
+    /*display: flex;*/
+    background-color: white;
+    /*flex: 1 1 100px;*/
+    /*align-items: flex-end;*/
+    /*flex: 1;*/
+    height: 70px;
+}
+.test {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+}
+.test1 {
+    /*background-color: blue;*/
+}
+
+.pages {
+    display: flex;
+    align-items: center;
+    float: left;
+    margin: 0px 0px 0px 0px;
+
+}
+.metamask {
+    display: flex;
+    /*margin-top: 50%;*/
+    font-size: 11px;
+    float: right;
+    /*margin: 0px 0px 0px 0px;*/
+}
+
